@@ -15,6 +15,13 @@ lunch lineage_achilles6_row_data-userdebug
 m -j4 bacon
 ```
 
-Kernel, DTB/DTBO and modules are inherited prebuilts. This repository does not
+The selected kernel and Wi-Fi module come from the official Lenovo Software Fix
+firmware `TB_X606X_S301085_230919_BMP.zip` (September 2023). The other seven
+modules match that package byte-for-byte. DTB/DTBO remain inherited prebuilts.
+Kernel SHA256: `c9b07e553475373f27946b4c6e4cc03d634558cefc6d0900132a46ae1cd8d8dd`.
+The matching TWRP manifest imports this same kernel. Android boot, Wi-Fi
+association, Enforcing and required HAL registration passed the new-build audit;
+this is not a complete hardware regression test.
+This repository does not
 provide complete corresponding kernel source or a kernel-source build.
 No security update is implied. Do not reuse the images for X606F/X606FA.
