@@ -9,6 +9,8 @@ DEVICE_PATH := device/lenovo/achilles6_row_data
 # Inherit from mt6765-common
 include device/lenovo/mt6765-common/BoardConfigCommon.mk
 
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Display
 TARGET_SCREEN_DENSITY := 240
 
